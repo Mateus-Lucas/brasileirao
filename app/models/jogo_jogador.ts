@@ -11,8 +11,6 @@ export default class JogoJogadore extends BaseModel {
   @column()
   declare jogadoresId: number
 
-
-
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 

@@ -8,7 +8,7 @@ export default class extends BaseSchema {
       table.increments('id')
       table.string('nome', 45).notNullable()
       table.string('idade').notNullable()
-      table.string('cpf', 15).notNullable()
+      table.string('cpf', 15).notNullable().unique()
       table.string('posicao').notNullable()
 
       table.timestamp('created_at')
