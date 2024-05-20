@@ -10,8 +10,7 @@ export default class extends BaseSchema {
       table.string('quant_jogadores').notNullable()
       table.date('data_criacao').notNullable()
       table.string('estado').notNullable()
-      table.integer('jogadores_id').unsigned().references('id').inTable('jogadores')
-      table.integer('presidentes_id').unsigned().references('id').inTable('presidentes')
+      table.integer('presidente_id').unsigned().references('id').inTable('presidentes')
 
       table.timestamp('created_at')
       table.timestamp('updated_at')

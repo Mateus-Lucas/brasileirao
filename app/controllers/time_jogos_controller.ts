@@ -20,8 +20,8 @@ export default class TimeJogosController {
     // Método para criar algum TimeJogos pelo Json
     async store({ request }: HttpContext) {
         const dados = request.only([
-            'timesId',
-            'jogosId',
+            'timeId',
+            'jogoId',
         ])
         return await TimeJogo.create(dados)
     }
@@ -29,8 +29,8 @@ export default class TimeJogosController {
     async update({ params, request }: HttpContext) {
         const timeJogos = await TimeJogo.findOrFail(params.id)
         const dados = request.only([
-            'timesId',
-            'jogosId',
+            'timeId',
+            'jogoId',
         ])
 
         timeJogos.merge(dados)

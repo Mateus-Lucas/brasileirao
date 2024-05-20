@@ -20,6 +20,9 @@ export default class Jogadore extends BaseModel {
   @column()
   declare posicao: string
 
+  @column()
+  declare timeId: number
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 

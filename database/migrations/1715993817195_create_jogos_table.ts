@@ -8,7 +8,7 @@ export default class extends BaseSchema {
       table.increments('id')
       table.string('nome', 45).notNullable()
       table.date('data').notNullable()
-      table.string('estadio', 45).notNullable()
+      table.string('estadio', 45).nullable()
 
       table.timestamp('created_at')
       table.timestamp('updated_at')

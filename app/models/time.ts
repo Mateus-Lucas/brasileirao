@@ -22,10 +22,7 @@ export default class Time extends BaseModel {
   declare estado: string
 
   @column()
-  declare jogadoresId: number
-
-  @column()
-  declare presidentesId: number
+  declare presidenteId: number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

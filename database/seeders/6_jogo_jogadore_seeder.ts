@@ -6,7 +6,9 @@ export default class extends BaseSeeder {
     
     return await JogoJogadore.createMany([
 
-      { jogadoresId: 1, jogosId: 2 },
+      { jogadoreId: 1, jogoId: 2 },
+      { jogadoreId: 2, jogoId: 2 },
+      { jogadoreId: 2, jogoId: 1 }
   
     ])
 

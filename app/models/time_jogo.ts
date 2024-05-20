@@ -6,10 +6,10 @@ export default class TimeJogo extends BaseModel {
   declare id: number
 
   @column()
-  declare timesId: number
+  declare timeId: number
 
   @column()
-  declare jogosId: number
+  declare jogoId: number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

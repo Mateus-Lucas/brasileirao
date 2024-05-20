@@ -6,7 +6,8 @@ export default class extends BaseSeeder {
     
     return await TimeJogo.createMany([
 
-      { timesId: 1, jogosId: 2 },
+      { timeId: 1, jogoId: 2 },
+      { timeId: 1, jogoId: 3 },
   
     ])
 
