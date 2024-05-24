@@ -34,7 +34,7 @@ export default class Time extends BaseModel {
   declare jogadores: HasMany<typeof Jogadore>
 
   @belongsTo(()=>Presidente)
-  declare presidentes: BelongsTo<typeof Presidente>
+  declare presidente: BelongsTo<typeof Presidente>
 
   @manyToMany(()=>Jogo, {
     pivotTable: 'time_jogos',

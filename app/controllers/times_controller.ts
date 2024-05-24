@@ -17,7 +17,7 @@ export default class TimeController {
         return await Time.query()
             .where('id', params.id)
             .preload('jogadores')
-            .preload('presidentes')
+            .preload('presidente')
             .preload('jogos')
             .first()
     }

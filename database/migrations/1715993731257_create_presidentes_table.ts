@@ -9,6 +9,7 @@ export default class extends BaseSchema {
       table.string('nome', 45).notNullable()
       table.string('idade').notNullable()
       table.string('cpf', 15).notNullable().unique()
+      table.integer('time_id').unsigned().references('id').inTable('presidentes')
       
       table.timestamp('created_at')
       table.timestamp('updated_at')

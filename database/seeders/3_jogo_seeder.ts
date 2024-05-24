@@ -17,7 +17,6 @@ export default class extends BaseSeeder {
       { nome: "Fortaleza x Ceará", data: "2024-06-28", estadio: "Castelão" },
       { nome: "Sport x Náutico", data: "2024-07-05", estadio: "Ilha do Retiro" }
 
-      ,
     ])
 
   }
