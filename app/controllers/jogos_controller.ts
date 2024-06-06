@@ -22,13 +22,13 @@ export default class JogoController {
 
     // Método para criar algum Jogo pelo Json
     async store({ request }: HttpContext) {
-        const dados = request.only(['nome', 'idade', 'cpf'])
+        const dados = request.only(['nome', 'data', 'estadio'])
         return await Jogo.create(dados)
     }
 
     async update({ params, request }: HttpContext) {
         const jogo = await Jogo.findOrFail(params.id)
-        const dados = request.only(['nome', 'idade', 'cpf'])
+        const dados = request.only(['nome', 'data', 'estadio'])
 
         jogo.merge(dados)
         return await jogo.save()
@@ -39,7 +39,7 @@ export default class JogoController {
         const jogo = await Jogo.findOrFail(params.id)
 
         await jogo.delete()
-        return { msg: 'Jogador deletado com sucesso', jogo }
+        return { msg: 'Jogo deletado com sucesso', jogo }
 
     }
 }

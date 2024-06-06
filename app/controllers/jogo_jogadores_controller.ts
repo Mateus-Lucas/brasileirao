@@ -19,13 +19,13 @@ export default class JogoJogadorController {
 
     // Método para criar algum JogoJogador pelo Json
     async store({ request }: HttpContext) {
-        const dados = request.only(['jogoId', 'jogadorId'])
+        const dados = request.only(['jogoId', 'jogadoreId'])
         return await JogoJogador.create(dados)
     }
 
     async update({ params, request }: HttpContext) {
         const jogoJogador = await JogoJogador.findOrFail(params.id)
-        const dados = request.only(['jogoId', 'jogadorId'])
+        const dados = request.only(['jogoId', 'jogadoreId'])
 
         jogoJogador.merge(dados)
         return await jogoJogador.save()

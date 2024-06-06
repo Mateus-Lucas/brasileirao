@@ -35,11 +35,25 @@ export default class PresidenteController {
     }
 
     // Deletando pruduto pelo Id do banco de dados
-    async destroy({ params }: HttpContext) {
-        const presidente = await Presidente.findOrFail(params.id)
-
-        await presidente.delete()
-        return { msg: 'Jogador deletado com sucesso', presidente }
-
+    async destroy({ params, response }: HttpContext) {
+        try {
+            console.log('Recebendo ID:', params.id);
+    
+            const presidente = await Presidente.findOrFail(params.id);
+            
+            console.log('Presidente encontrado:', presidente);
+            
+            await presidente.delete();
+            
+            console.log('Presidente deletado com sucesso');
+    
+            return response.status(200).send({ msg: 'Presidente deletado com sucesso', presidente });
+        } catch (error) {
+            console.error('Erro ao tentar excluir presidente:', error);
+    
+            return response.status(500).send({ error: 'Não é possível excluir, pois outra tabela depende desse ID' });
+        }
     }
+    
+    
 }

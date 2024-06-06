@@ -29,7 +29,6 @@ export default class TimeController {
             'quantJogadores',
             'dataCriacao',
             'estado',
-            'jogadoresId',
             'presidentesId'
         ])
         return await Time.create(dados)
@@ -42,7 +41,6 @@ export default class TimeController {
             'quantJogadores',
             'dataCriacao',
             'estado',
-            'jogadoresId',
             'presidentesId'
         ])
 
